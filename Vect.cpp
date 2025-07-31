@@ -3,18 +3,23 @@
 #include<conio.h>  
 using namespace std;
 int main(){
-//Desarrolle un programa que lea de la entrada estandar un vector de enteros y determine el mayor elemento del vector.
-int numero[100], n, mayor;
-cout<<"Digite el numero de elementos del arreglo:\n";
-cin>>n;
-for(int i=0; i<n; i++){
-    cout<<i+1<<"Digite un numero:\n";
-    cin>>numero[i];
-    // 1 2 3 5 10
-    if(numero[i] >mayor){
-        mayor = numero[i];    }
+//Escribe un programa defina un vector de numeros y calcule si existe algun numero en el vectoor cuyo valor equivale a la suma del resto de numeros del vector.
+int numero[5] = {1, 2, 3, 4, 10};
+int suma = 0, mayor = 0;
+for(int i=0; i<5; i++){
+    suma += numero[i];
+
+    if (numero [i] >mayor){
+        mayor = numero[i];
+    }
+}   
+if(mayor == suma-mayor){
+    cout<<"El numero"<<mayor<<" equivale a suma de los demas";
 }
-cout<<"El mayor numero del arreglo es: "<<mayor<<endl;
+else{
+    cout<<"No existe ningun numero que sea igual a la suma de los demas"<<endl;
+}
+cout<<"La suma de los numeros es: " << suma << endl;
 getch();
     return 0;
 }
