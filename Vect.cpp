@@ -3,14 +3,18 @@
 #include<conio.h>  
 using namespace std;
 int main(){
- // Escribe un programa que define un vector de numeros y calcule la suma de sus elementos.
-int numeros[]= {1,2,3,4,5};
-int suma = 0;
-for (int i =0; i<5; i++){
-    suma += numeros[i];
+// Escriba un programa que lea de la entrada estandar un vector de numeros y muestre en la salida entandar los numeros del vector con sus indices asociados.
+int numeros[100]; n;
+cout<<"Digite el numero de elementos del vector:\n";
+cin>>n;
+for (int i=0; i<n; i++){
+    cout<<"Digite el elemento\n";
+    cin>>numeros[i];
 }
-cout<<"La suma de los elementos del vector es: " << suma << endl;
-// Espera a que el usuario presione una tecla antes de cerrar la consola
+cout<<"Los numeros del vector con sus indices asociados son:\n";
+for (int i=0; i<n; i++){
+    cout<<"Indice: "<<i<<" Valor: "<<numeros[i]<<endl;
+}
 getch();
     return 0;
 }
