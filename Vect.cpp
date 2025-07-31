@@ -3,18 +3,18 @@
 #include<conio.h>  
 using namespace std;
 int main(){
-// Escriba un programa que lea de la entrada estandar un vector de numeros y muestre en la salida entandar los numeros del vector con sus indices asociados.
-int numeros[100]; n;
-cout<<"Digite el numero de elementos del vector:\n";
+//Desarrolle un programa que lea de la entrada estandar un vector de enteros y determine el mayor elemento del vector.
+int numero[100], n, mayor;
+cout<<"Digite el numero de elementos del arreglo:\n";
 cin>>n;
-for (int i=0; i<n; i++){
-    cout<<"Digite el elemento\n";
-    cin>>numeros[i];
+for(int i=0; i<n; i++){
+    cout<<i+1<<"Digite un numero:\n";
+    cin>>numero[i];
+    // 1 2 3 5 10
+    if(numero[i] >mayor){
+        mayor = numero[i];    }
 }
-cout<<"Los numeros del vector con sus indices asociados son:\n";
-for (int i=0; i<n; i++){
-    cout<<"Indice: "<<i<<" Valor: "<<numeros[i]<<endl;
-}
+cout<<"El mayor numero del arreglo es: "<<mayor<<endl;
 getch();
     return 0;
 }
