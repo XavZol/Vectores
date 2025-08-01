@@ -2,20 +2,24 @@
 #include<conio.h>  
 using namespace std;
 int main(){
-// Hacer un programa que lea 5 numeros en un arreglo, le copie a otro arreglo multiplicado por dos y muestre el segundo arreglo.
-int numeros[5], numeros2[5];
-for(int i=0; i<5; i++){
-    cout<<"Digite los elementos del arreglo:\n";
-    cin>>numeros[i];
+// Matrices 
+// Hacer un programa para rellenar una matriz pidiendo al usuario el numero de filas y columnas; posteriormente mostrar la matriz en pantalla;
+int main[100][100], filas, columnas;
+cout<<"Digite el numero de filas: ";
+cin>>filas;
+cout<<"Digite el numero de columnas; ";
+cin>>columnas;
+//almacenando numeros en la matriz
+for (int i=0; i<filas; i++){
+    for (int j=0; j<columnas; j++){
+        cout<<"Digite el valor de la posicion ["<<i<<"]"<<"["<<j<<"]";
+        cin>>numero[i][j];
+    }
 }
-// Multiplicar por los 2 numeros n del areglo
-for(int i=0; i<5; i++){
-    numeros2[i] = numeros[i] * 2;
-}
-// Mostrar el segundo arreglo
-cout<<"El segundo arreglo es:\n";
-for (int i=0; i<5; i++){
-    cout<<numeros2[i]<<"\n";
+for (int i=0; i<filas; i++){
+    for (int j=0; j<columnas; j++){
+        cout<<numeros[i][j]<<" ";
+    }
 }
 getch();
     return 0;
