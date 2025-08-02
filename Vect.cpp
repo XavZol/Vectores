@@ -4,34 +4,29 @@
 #include<conio.h>  
 using namespace std;
 int main(){
-// Hacer una matriz pidiendole al usuario de numero de filas y columnas, llenar de numeros aleatorios, copiar el contenido a otra matriz y por ultima mostrarla en pantalla.
-int numeros[100][100], dato, filas, columnas;
-int numeros2[100][100];
-cout<<"Digite el numero de filas:\n";
-cin>>filas;
-cout<<"Digite el numero de columnas:\n";
-cin>>columnas;
-
-srand(time(NULL)); //generar numeros aleatorios
-
-for(int i=0; i<filas; i++){
-    for(int j=0; j<columnas; j++){
-        dato = i+rand()%(100); // generando numeros aleatorios (1-100)
-    numero[i][j] = dato;
+// Realice un programa que lea una matriz de 3x3 y cree su matriz traspuesta. La matriz traspuesta es aquella en la que la columna 1 era la fila 1 de la matriz original.
+/1 2 3/     /1 4 7/
+/4 5 6/     /2 5 8/ 
+/7 8 9/     /3 6 9/
+int numeros[3][3];
+for(int i=0; i<3; i++){
+    for(int j=0; j<3; j++){
+        cout<<"Digite un numero ["<<i<<"]["<<j<<"]:";
+        cin>>numeros[i][j];
     }
 }
-// Copiando el contenido a otra matriz 
-for(int i=0; i<filas; i++){
-    for(int j=0; j<columnas; i++){
-        numeros2[i][j] = numeros[i][j];
-    }
-}
-// Imprimiendo matriz numero 2 en pantalla
-for(int i=0; i<filas; i++){
-    for(int j=0; j<columnas; i++){
-        cout<<numeros2[i][j]<<" ";
+cout<<"Matriz Original\n";
+for(int i=0; i<3; i++){
+    for(int j=0; j<3; j++){
+        cout<<numeros[i][j];
     }
     cout<<"\n";
+}
+cout<<"\nMatriz Transpuesta\n";
+for(int i=0; i<3; i++){
+    for(int j=0; j<3; j++){
+        cout<<numeros[j][i];
+    }
 }
 system("pause");
 getch();
