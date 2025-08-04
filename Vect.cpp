@@ -1,30 +1,19 @@
 #include<iostream>
-#include<stdlib.h>
-#include<time.h>
-#include<conio.h>  
+#include<conio.h>
+#include<string.h>
 using namespace std;
 int main(){
-// Realice un programa que calcule el producto de dos matrices cuadradas de 3x3.
-int A[3][3] = {{1,2,1},{2,1,1},{2,1,2}};
-int B[3][3] = {{3,2,1},{2,3,1},{1,1,3}};
-int C[3][3];
+// Cadenas de caracteres
+char palabra[] = "Panfilo";
+char palabra2[]= {'P', 'a', 'n', 'f', 'i', 'l', 'o', '\0'};
+char nombre[30];
 
-for(int i=0; i<3; i++){
-    for(int j=0; j<3; j++){
-        C[i][j] = 0; // Inicializar el elemento C[i][j] a 0
-        for(int k=0; k<3; k++){
-            C[i][j] = C[i][j] + A[i][k]*B[k][j]; // Calcular el prducto de matrices.
-        }
-    }
-}
-cout<<"La matriz resultante de la multipliacion C es:\n";
-    for(int i=0; i<3; i++){
-        for(int j=0; j<3; j++){
-            cout<<C[i][j]<<" "; // Imprimir la matriz resultante.
-        }
-        cout<<"\n"; 
-    }
-system("pause");
+cout<<"Digite su nombre:\n";
+cin.getline(nombre, 30, "\n");
+// en su caso usar "gets(nombre);" para mas caracteres de los debidos. 
+
+cout<<nombre<<endl;
+
 getch();
-    return 0;
+return 0;
 }
